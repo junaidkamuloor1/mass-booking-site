@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Showtimes &mdash; MASS</title>
+    <meta name="description" content="Showtimes for films now playing at MASS.">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/showtimes.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <nav class="header">
+
+            <a href="../index.html" class="logo">MASS</a>
+
+            <div class="menu" id="site-menu">
+                <a href="../index.html#now-showing" class="menu-link">FILMS</a>
+                <a href="showtimes.html" class="menu-link active">SHOWTIMES</a>
+                <a href="tickets.html" class="menu-link">TICKETS</a>
+                <a href="#" class="menu-link sign-in-mobile">SIGN IN</a>
+            </div>
+
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a href="#" class="sign-in">SIGN IN</a>
+
+        </nav>
+    </div>
+</header>
+
+<main class="container showtimes-page">
+
+    <!-- ============ THEATRE LIST VIEW ============ -->
+    <div id="theatresView">
+
+        <div class="page-head">
+            <div>
+                <span class="section-label">NOW PLAYING</span>
+                <h1>choose a theatre.</h1>
+            </div>
+
+            <div class="location-pill">
+                <span class="dot"></span>
+                CHENNAI
+            </div>
+        </div>
+
+        <section class="theatre-section">
+            <div class="theatre-grid" id="theatreGrid"></div>
+        </section>
+
+    </div>
+
+    <!-- ============ THEATRE DETAIL VIEW ============ -->
+    <div id="theatreDetailView">
+
+        <div class="back-row">
+            <button class="back-btn" onclick="showTheatreList()">&larr; ALL THEATRES</button>
+        </div>
+
+        <div class="detail-head">
+            <span class="section-label">SHOWTIMES</span>
+            <h2 id="detailTheatreName"></h2>
+            <div class="detail-sub">
+                <span id="detailTheatreLoc"></span>
+                <span id="detailTheatreScreens"></span>
+            </div>
+        </div>
+
+        <div class="date-selector" id="dateSelector"></div>
+
+        <section class="movie-list" id="movieList"></section>
+
+    </div>
+
+    <!-- Booking Popup -->
+    <div class="booking-overlay" id="bookingOverlay">
+
+        <div class="booking-container" id="bookingContainer">
+
+            <!-- STEP 1: seat selection -->
+            <div class="step-seats">
+
+                <h1>Select Your Seats</h1>
+                <p>SCREEN</p>
+                <div class="fade-line"></div>
+
+                <div class="theatre" id="theatre"></div>
+
+                <p class="seat-warning" id="seatWarning">Select at least one seat to continue.</p>
+
+                <div class="legend">
+                    <div><span class="seat available"></span> Available</div>
+                    <div><span class="seat selected"></span> Selected</div>
+                    <div><span class="seat occupied"></span> Occupied</div>
+                </div>
+
+                <button class="book-btn">confirm</button>
+                <button class="close-btn" onclick="closeBooking()">cancel</button>
+
+            </div>
+
+            <!-- STEP 2: booking confirmation -->
+            <div class="step-confirm">
+
+                <div class="confirm-icon">&#10003;</div>
+                <h1>Seats Booked</h1>
+                <p class="confirm-sub">YOUR TICKET IS READY</p>
+
+                <div class="ticket-preview">
+                    <p class="ticket-preview-title" id="confirmMovieTitle"></p>
+                    <p class="ticket-preview-sub" id="confirmMeta"></p>
+                    <div class="seat-chips" id="confirmSeats"></div>
+                </div>
+
+                <div class="confirm-actions">
+                    <a href="tickets.html" class="view-tickets-btn">View My Tickets</a>
+                    <button class="close-btn" onclick="closeBooking()">done</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+
+        <div class="footer-main">
+            <div class="footer-brand">
+                <span>MASS</span>
+                <p>Films make your life better.</p>
+            </div>
+
+            <div class="footer-nav">
+                <a href="../index.html#now-showing">FILMS</a>
+                <a href="showtimes.html">SHOWTIMES</a>
+                <a href="tickets.html">TICKETS</a>
+            </div>
+        </div>
+
+        <div class="footer-line"></div>
+
+        <div class="footer-bottom">
+            <span>© 2026 MASS</span>
+            <span>MADE FOR THE LOVE OF CINEMA</span>
+        </div>
+
+    </div>
+</footer>
+
+<script src="../js/homepage.js"></script>
+
+</body>
+</html>
