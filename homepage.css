@@ -608,6 +608,11 @@ button:focus-visible {
     .movie-grid {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .container {
+        width: min(1310px, calc(100% - 0px));
+        margin: 0;
+    }
 }
 
 @media (max-width: 900px) {
