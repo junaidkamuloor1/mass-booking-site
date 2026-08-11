@@ -1,0 +1,44 @@
+<!-- STEP 2: payment (demo only) -->
+<div class="step-payment">
+
+    <h1>Payment</h1>
+    <p>DEMO CHECKOUT</p>
+    <div class="fade-line"></div>
+
+    <div class="payment-summary">
+        <span id="paySummaryMovie"></span>
+        <span id="payAmount"></span>
+    </div>
+
+    <div class="payment-form">
+        <label class="field">
+            <span>Card Number</span>
+            <input type="text" id="cardNumber" placeholder="4242 4242 4242 4242" maxlength="19">
+        </label>
+
+        <div class="field-row">
+            <label class="field">
+                <span>Expiry</span>
+                <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+            </label>
+            <label class="field">
+                <span>CVV</span>
+                <input type="text" id="cardCvv" placeholder="123" maxlength="3">
+            </label>
+        </div>
+
+        <label class="field">
+            <span>Name on Card</span>
+            <input type="text" id="cardName" placeholder="A. MOVIEGOER">
+        </label>
+    </div>
+
+    <p class="demo-note">This is a demo payment form — no card data is sent or stored.</p>
+
+    <button class="book-btn" id="payBtn">pay now</button>
+    <button class="close-btn" onclick="closeBooking()">cancel</button>
+
+</div>
+
+<!-- STEP 3: booking confirmation -->
+<div class="step-confirm">

@@ -1,0 +1,99 @@
+/* STEP SWITCHING */
+
+.booking-container .step-payment,
+.booking-container .step-confirm {
+    display: none;
+}
+
+.booking-container.payment .step-seats {
+    display: none;
+}
+
+.booking-container.payment .step-payment {
+    display: block;
+}
+
+.booking-container.confirmed .step-seats,
+.booking-container.confirmed .step-payment {
+    display: none;
+}
+
+.booking-container.confirmed .step-confirm {
+    display: block;
+}
+
+/* PAYMENT STEP */
+
+.payment-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 240, 0.15);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+    background: rgba(255, 255, 240, 0.02);
+    color: var(--text);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+}
+
+.payment-summary #payAmount {
+    color: var(--orange);
+    font-weight: 600;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.field-row {
+    display: flex;
+    gap: 14px;
+}
+
+.field-row .field {
+    flex: 1;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field span {
+    color: rgba(255, 255, 240, 0.5);
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+}
+
+.field input {
+    background: rgba(255, 255, 240, 0.04);
+    border: 1px solid rgba(255, 255, 240, 0.2);
+    border-radius: 4px;
+    padding: 10px 12px;
+    color: var(--text);
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.field input:focus {
+    border-color: var(--orange);
+}
+
+.demo-note {
+    color: rgba(255, 255, 240, 0.35);
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+    margin: -6px 0 20px;
+}
